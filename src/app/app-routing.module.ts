@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -35,6 +36,9 @@ const routes: Routes = [
     scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled'
   })],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ]
 })
 export class AppRoutingModule { }

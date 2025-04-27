@@ -12,8 +12,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
 
 @NgModule({
   declarations: [
@@ -31,9 +29,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     MatProgressBarModule,
     MatCardModule
   ],
-  providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
