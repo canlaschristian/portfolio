@@ -1,0 +1,16 @@
+<mat-card class="skill-card">
+  <mat-card-header>
+    <mat-icon mat-card-avatar>{{skill.icon}}</mat-icon>
+    <mat-card-title>{{skill.name}}</mat-card-title>
+    <mat-card-subtitle>{{skill.level}}</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <mat-progress-bar 
+      mode="determinate" 
+      [value]="skill.progress"
+      color="primary">
+    </mat-progress-bar>
+    <div class="progress-value">{{skill.progress}}%</div>
+  </mat-card-content>
+</mat-card>

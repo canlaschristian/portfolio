@@ -1,0 +1,41 @@
+<mat-toolbar class="header-toolbar" [class.dark-theme]="themeService.isDarkTheme | async">
+  <div class="nav-container">
+    <div class="logo" routerLink="/home">
+    </div>
+    
+    <nav class="desktop-nav">
+      <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+      <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+      <a mat-button routerLink="/skills" routerLinkActive="active">Skills</a>
+      <a mat-button routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a mat-button routerLink="/testimonials" routerLinkActive="active">Testimonials</a>
+      <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+    </nav>
+    
+    <div class="theme-toggle">
+      <!-- <button mat-icon-button (click)="setTheme('light')" *ngIf="(themeService.isDarkTheme | async)">
+        <mat-icon>light_mode</mat-icon>
+      </button>
+      <button mat-icon-button (click)="setTheme('dark')" *ngIf="!(themeService.isDarkTheme | async)">
+        <mat-icon>dark_mode</mat-icon>
+      </button> -->
+    </div>
+    
+    <button mat-icon-button class="mobile-menu" (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="showSidebar" position="end">
+    <div class="mobile-nav">
+      <a mat-button routerLink="/home" (click)="showSidebar = false">Home</a>
+      <a mat-button routerLink="/about" (click)="showSidebar = false">About</a>
+      <a mat-button routerLink="/skills" (click)="showSidebar = false">Skills</a>
+      <a mat-button routerLink="/projects" (click)="showSidebar = false">Projects</a>
+      <a mat-button routerLink="/testimonials" (click)="showSidebar = false">Testimonials</a>
+      <a mat-button routerLink="/contact" (click)="showSidebar = false">Contact</a>
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>

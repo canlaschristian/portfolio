@@ -1,0 +1,121 @@
+/* Header Styles */
+.header-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 70px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3f51b5 0%, #2196f3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 5px;
+}
+
+.dark-theme .logo span {
+  background: linear-gradient(135deg, #bb86fc 0%, #3700b3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Navigation */
+.desktop-nav {
+  display: flex;
+  gap: 5px;
+}
+
+.desktop-nav a {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.desktop-nav a:hover {
+  transform: translateY(-2px);
+}
+
+.desktop-nav a.active {
+  font-weight: 600;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+}
+
+/* Theme Toggle */
+.theme-toggle button {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle button:hover {
+  transform: scale(1.1);
+}
+
+/* Dark Theme Styles */
+.dark-theme.header-toolbar {
+  background-color: #1A1A2E;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .desktop-nav a {
+  color: #e0e0e0;
+}
+
+.dark-theme .desktop-nav a.active {
+  color: #bb86fc;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 250px;
+}
+
+.mobile-nav a {
+  text-align: left;
+  padding: 10px 0;
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+  
+  .nav-container {
+    padding: 0 15px;
+  }
+}

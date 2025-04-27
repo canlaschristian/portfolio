@@ -1,0 +1,35 @@
+.projects-container {
+  background-color: #1d1d1d;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+h1 {
+  font-size: 36px;
+  color: #a855f7;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.construction-logo {
+  width: 250px;
+  margin-top: -150px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 20px;
+  color: #cbd5e1;
+}
