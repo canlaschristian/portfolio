@@ -16,6 +16,7 @@ export class HeaderComponent {
   }
 
   setTheme(theme: 'light' | 'dark'): void {
+    console.log(theme)
     this.themeService.setDarkTheme(theme === 'dark');
   }
 }

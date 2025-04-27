@@ -78,16 +78,29 @@
 }
 
 /* Dark Theme Styles */
-.dark-theme.header-toolbar {
+/* .dark-theme.header-toolbar {
   background-color: #1A1A2E;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
+} */
 
-.dark-theme .desktop-nav a {
+/* .dark-theme .desktop-nav a {
   color: #e0e0e0;
 }
 
 .dark-theme .desktop-nav a.active {
+  color: #bb86fc;
+} */
+
+.header-toolbar {
+  background-color: #1A1A2E;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-nav a {
+  color: #e0e0e0;
+}
+
+.desktop-nav a.active {
   color: #bb86fc;
 }
 

@@ -11,6 +11,8 @@ export class ThemeService {
   constructor() {
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('darkTheme');
+    console.log('theme service')
+    console.log(savedTheme)
     if (savedTheme) {
       this.setDarkTheme(JSON.parse(savedTheme));
     }
