@@ -9,8 +9,8 @@
   --accent-color: #ff4081;
   --warn-color: #f44336;
   --light-text: #ffffff;
-  --dark-text: #ffffff;
-  --secondary-text: #ffffff;
+  --dark-text: #212121;
+  --secondary-text: #757575;
   --divider-color: #bdbdbd;
   --light-bg: #f0f0f0;
   --dark-bg: #212121;
@@ -19,7 +19,7 @@
 
 html, body {
   height: 100%;
-  margin: 500px;
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   color: var(--dark-text);
   background-color: var(--light-bg);
