@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: npm run build -- --configuration production --baseHref=/portfolio/
+        run: npm run build -- --configuration production --base-href /portfolio/
 
       - name: Create 404.html fallback
         run: |
