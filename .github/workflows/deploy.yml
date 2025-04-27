@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write 
+  contents: write
 
 jobs:
   build:
@@ -24,10 +24,19 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: npm run build -- --configuration production --base-href /portfolio/
+        run: npm run build -- --configuration production --baseHref=/portfolio/
+
+      - name: Create 404.html fallback
+        run: |
+          cp dist/portfolio-app/index.html dist/portfolio-app/404.html
+          sed -i 's/<base href="\/portfolio\/">/<base href="\/">/g' dist/portfolio-app/404.html
+
+      - name: Disable Jekyll processing
+        run: touch dist/portfolio-app/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/portfolio-app
+          enable_jekyll: false
