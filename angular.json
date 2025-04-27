@@ -26,7 +26,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/app/core/header/header.component.css"
+              "src/app/core/components/header/header.component.css"
             ],
             "scripts": []
           },
