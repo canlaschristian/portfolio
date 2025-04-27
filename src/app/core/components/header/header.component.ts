@@ -5,7 +5,7 @@ import { ThemeService } from '../../services/theme.service';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class HeaderComponent {
   showSidebar = false;
