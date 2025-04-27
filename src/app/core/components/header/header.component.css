@@ -8,6 +8,8 @@
   height: 75px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #1A1A2E;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -91,10 +93,6 @@
   color: #bb86fc;
 } */
 
-.header-toolbar {
-  background-color: #1A1A2E;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
 
 .desktop-nav a {
   color: #e0e0e0;
